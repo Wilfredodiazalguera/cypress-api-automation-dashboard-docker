@@ -1,0 +1,23 @@
+{
+  "name": "cypress-api-automation",
+  "version": "1.0.0",
+  "description": "Test APIs with Cypress as full API Automation framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wilfredodiazalguera/cypress-api-automation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Wilfredodiazalguera/cypress-api-automation/issues"
+  },
+  "homepage": "https://github.com/Wilfredodiazalguera/cypress-api-automation#readme",
+  "devDependencies": {
+    "cypress": "^11.1.0"
+  }
+}
