@@ -26,13 +26,15 @@ jobs:
               browser: chrome
               headed: true
 
-         - uses: actions/upload-artifact@v3
+         - name: Save screenshots if test fails
+           uses: actions/upload-artifact@v3
            if: failure()
            with:
               name: cypress-screenshots
               path: cypress/screenshots
 
-         - uses: actions/upload-artifact@v3
+         - name: Save video recording always
+           uses: actions/upload-artifact@v3
            if: always()
            with:
               name: cypress-videos

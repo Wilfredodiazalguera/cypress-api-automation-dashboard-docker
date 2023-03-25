@@ -6,11 +6,11 @@
 ![](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white)
 ![](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
 
-# Cypress-Api-Automation
+# Cypress-Api-Automation-sorryCypressDashboard
 
 ---
 
-> ### Project made from scratch to perform api automated tests, also adding integrations to GitHub Actions and Azure DevOps Pipelines
+> ### Project made from scratch to perform api automated tests, also adding integrations to GitHub Actions and Sorry Cypress (Dashboard)
 
 ---
 
@@ -18,31 +18,32 @@
 
 ---
 
-## Installation
+## Cypress Installation
 
 > Use the package manager npm [nodejs](https://nodejs.org/en/) to install the framework and dependencies
 
 ```
 npm i
 ```
+## Cypress Dashboard installation (Check docs to enable parallelization, recording and debugging of cypress tests) (Sefl hosted service)
 
+> Use docker to download and run the containers needed (after containers are running you could access http://localhost:8080)
+
+```
+docker compose -f docker-compose-minio.yml up
+```
 ## How to use it
 
 ```
-npm test //this run all tests in headless mode
+npm test  // this run all tests in headless mode
 ```
 
 ## Reporter
 
+Github Actions genereate screenshots and videos
+
 ### Reporter on local machine
 
->
-
-### Reporter on Github actions
-
->
-
-## Patter Design implemented ()
 
 ### License
 
