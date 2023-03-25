@@ -4,7 +4,7 @@
   "description": "Test APIs with Cypress as full API Automation framework",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress run"
+    "test": "npx cypress run --browser chrome"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/Wilfredodiazalguera/cypress-api-automation#readme",
   "devDependencies": {
-    "cypress": "^11.1.0"
+    "cypress": "^12.8.1"
   },
   "dependencies": {
     "cypress-plugin-api": "^2.11.0"
