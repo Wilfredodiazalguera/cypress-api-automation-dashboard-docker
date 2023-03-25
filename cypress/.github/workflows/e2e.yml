@@ -1,0 +1,39 @@
+name: E2E Cypress Test GitHub Actions
+
+on:
+   push:
+      branches:
+         - main
+         - develop
+
+jobs:
+   Cypress-v12-run-tests:
+      runs-on: ubuntu-22.04
+      steps:
+         - name: Checkout
+           uses: actions/checkout@v3
+
+         - name: Install Node.js V16
+           uses: actions/setup-node@v3
+           with:
+              node-version: "19.6.0"
+
+         - name: Install dependencies and running Cypress
+           id: runningcypress
+           uses: cypress-io/github-action@v5
+           with:
+              config-file: cypress.config.js
+              browser: chrome
+              headed: true
+
+         - uses: actions/upload-artifact@v3
+           if: failure()
+           with:
+              name: cypress-screenshots
+              path: cypress/screenshots
+
+         - uses: actions/upload-artifact@v3
+           if: always()
+           with:
+              name: cypress-videos
+              path: cypress/videos
