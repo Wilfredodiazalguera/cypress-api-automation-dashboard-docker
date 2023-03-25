@@ -3,7 +3,7 @@ name: E2E Cypress Test GitHub Actions
 on:
    push:
       branches:
-         - main
+         - master
          - develop
 
 jobs:
