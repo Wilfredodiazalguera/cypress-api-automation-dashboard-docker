@@ -29,7 +29,7 @@ npm i
 ## How to use it
 
 ```
-
+npm test //this run all tests in headless mode
 ```
 
 ## Reporter
@@ -38,7 +38,7 @@ npm i
 
 >
 
-### Reporter on Github actions or Azure DevOps Pipeline
+### Reporter on Github actions
 
 >
 

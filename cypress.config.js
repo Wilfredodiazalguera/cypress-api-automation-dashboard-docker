@@ -6,5 +6,8 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
     baseUrl: "https://pokeapi.co/api/v2/pokemon/",
+    env: {
+      requestMode: true
+    }
   },
 });

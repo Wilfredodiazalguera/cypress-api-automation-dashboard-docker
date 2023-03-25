@@ -1,21 +1,12 @@
 /// <reference types = "Cypress" />
+import pokemonData from '../fixtures/pokemonData.json'
 
-describe("Test GET API pokeapi", () => {
-  const pokemonIds = [
-    {
-      id: 25,
-      name: "pikachu",
-    },
-    {
-      id: 100,
-      name: "voltorb",
-    },
-  ];
+describe("GET API pokeapi", () => {
 
-  pokemonIds.forEach((pokemonId) => {
+  pokemonData.forEach((pokemonId) => {
     const { id, name } = pokemonId;
 
-    it(`Test Headers Validation with pokemon: ${name}`, () => {
+    it(`GET - Headers Validation with pokemon: ${name}`, () => {
       cy.request(`${id}`).as(`${id}`);
       cy.get(`@${id}`)
         .its("headers")
@@ -23,12 +14,12 @@ describe("Test GET API pokeapi", () => {
         .should("include", "application/json; charset=utf-8");
     });
 
-    it(`Test status code with pokemon name: ${name}`, () => {
+    it(`GET - Status code with pokemon : ${name}`, () => {
       cy.request(`${id}`).as(`${id}`);
       cy.get(`@${id}`).its("status").should("equal", 200);
     });
 
-    it(`Test pokemon name with pokemon name: ${name}`, () => {
+    it(`GET - Pokemon name with pokemon : ${name}`, () => {
       cy.request({
         method: "GET",
         url: `${id}`,
@@ -39,12 +30,13 @@ describe("Test GET API pokeapi", () => {
     });
   });
 
-  it("Test bad request", () => {
+  it("GET - Bad request", () => {
     cy.request({
       method: "GET",
-      url: "1000",
+      url: "89568465185",
       failOnStatusCode: false,
     }).as("pokemon1000");
     cy.get("@pokemon1000").its("status").should("equal", 404);
   });
+
 });
