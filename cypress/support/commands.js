@@ -1,1 +1,3 @@
 
+Cypress.Commands.add("", () => {
+ });
